@@ -11,6 +11,10 @@ HopShop is an app that helps shoppers to find the products they ar elooking for 
 - User can adjust the cropper manually, or by tapping on small, cropped images
 - Prepare to send the coordinates of cropper vertectes for next request
 
+##
+
+link to design: https://www.figma.com/file/hV6tL9Etz8eBiaWwcO30Ax/Untitled?node-id=1%3A2
+
 ## Endpoints
 
 ### Guest
