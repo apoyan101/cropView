@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.6.1)
+  - CropPickerView (0.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - CropPickerView
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CropPickerView
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  CropPickerView: 7149fca438041a7a78d88e88dd0de805c182fc6a
+
+PODFILE CHECKSUM: 5522f42716c8463af92a5361d7b42ea45434e120
+
+COCOAPODS: 1.11.3
