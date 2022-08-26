@@ -10,9 +10,11 @@ import Alamofire
 
 final class ApiManager {
     private(set) var userRequestController: UserRequestController!
-
+    private(set) var uploadDataRequestController: UploadDataRequestController!
+    
     init() {
         userRequestController = UserRequestController()
+        uploadDataRequestController = UploadDataRequestController()
     }
 }
 

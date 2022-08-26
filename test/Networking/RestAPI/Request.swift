@@ -55,4 +55,24 @@ final class Request {
             }
         }
     }
+
+    // MARK: - Upload data -
+
+    func uploadData<T: Decodable>(type: T.Type = T.self, data: Data, dataName: String, completion: @escaping (Response<T>) -> Void) {
+        AF.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(data, withName: dataName)
+        }, with: request).responseDecodable { (response: DataResponse<Response<T>, AFError>) in
+            switch response.result {
+            case .success(let data):
+                if data.data == nil, data.status != 200, let url = response.request?.url {
+                    print("Error: \(data.msg) from \(url)")
+                }
+                completion(data)
+            case .failure(let error):
+                print("Alamofire error", error.localizedDescription, "from - \(String(describing: response.request?.url))")
+                print(response)
+                completion(Response())
+            }
+        }
+    }
 }
