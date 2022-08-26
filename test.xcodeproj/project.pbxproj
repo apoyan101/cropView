@@ -13,6 +13,16 @@
 		C5B6CE0528B8C24400986E4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B6CE0328B8C24400986E4A /* LaunchScreen.storyboard */; };
 		C5B6CE0E28B8C7E300986E4A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE0C28B8C7E300986E4A /* MainViewController.swift */; };
 		C5B6CE0F28B8C7E300986E4A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5B6CE0D28B8C7E300986E4A /* MainViewController.xib */; };
+		C5B6CE1428B8DB5E00986E4A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE1328B8DB5E00986E4A /* Request.swift */; };
+		C5B6CE1928B8FD5700986E4A /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE1628B8FD5700986E4A /* KeychainWrapper.swift */; };
+		C5B6CE1A28B8FD5700986E4A /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE1828B8FD5700986E4A /* KeychainItemAccessibility.swift */; };
+		C5B6CE1E28B94F2800986E4A /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE1D28B94F2800986E4A /* RequestManager.swift */; };
+		C5B6CE2028B94F7300986E4A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE1F28B94F7300986E4A /* Response.swift */; };
+		C5B6CE2228B9501800986E4A /* UserRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2128B9501800986E4A /* UserRequestController.swift */; };
+		C5B6CE2428B9508E00986E4A /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2328B9508E00986E4A /* ImageData.swift */; };
+		C5B6CE2828B9511600986E4A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2728B9511600986E4A /* UserController.swift */; };
+		C5B6CE2B28B951CA00986E4A /* Utilitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2A28B951CA00986E4A /* Utilitie.swift */; };
+		C5B6CE2D28B9524300986E4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2C28B9524300986E4A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,17 @@
 		C5B6CE0628B8C24400986E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5B6CE0C28B8C7E300986E4A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C5B6CE0D28B8C7E300986E4A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		C5B6CE1328B8DB5E00986E4A /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		C5B6CE1628B8FD5700986E4A /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		C5B6CE1728B8FD5700986E4A /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftKeychainWrapper.h; sourceTree = "<group>"; };
+		C5B6CE1828B8FD5700986E4A /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		C5B6CE1D28B94F2800986E4A /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		C5B6CE1F28B94F7300986E4A /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		C5B6CE2128B9501800986E4A /* UserRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestController.swift; sourceTree = "<group>"; };
+		C5B6CE2328B9508E00986E4A /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		C5B6CE2728B9511600986E4A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		C5B6CE2A28B951CA00986E4A /* Utilitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilitie.swift; sourceTree = "<group>"; };
+		C5B6CE2C28B9524300986E4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +67,6 @@
 				BD02F9746FCF0A50EFF93F87 /* Pods-test.debug.xcconfig */,
 				619D9C3788F5572BADDBA765 /* Pods-test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -80,7 +100,11 @@
 			isa = PBXGroup;
 			children = (
 				C5B6CDF828B8C24300986E4A /* AppDelegate.swift */,
+				C5B6CE1228B8DB4D00986E4A /* Networking */,
+				C5B6CE2628B950FB00986E4A /* Controllers */,
 				C5B6CE1028B8C7F200986E4A /* ViewControllers */,
+				C5B6CE2928B951A800986E4A /* Utilities */,
+				C5B6CE1528B8FD5700986E4A /* KeychainWrapper */,
 				C5B6CE1128B8C80300986E4A /* Supporting Files */,
 			);
 			path = test;
@@ -89,8 +113,7 @@
 		C5B6CE1028B8C7F200986E4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C5B6CE0C28B8C7E300986E4A /* MainViewController.swift */,
-				C5B6CE0D28B8C7E300986E4A /* MainViewController.xib */,
+				C5B6CE2528B950DC00986E4A /* Main */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -103,6 +126,70 @@
 				C5B6CE0628B8C24400986E4A /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5B6CE1228B8DB4D00986E4A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C5B6CE1C28B94F0E00986E4A /* Models */,
+				C5B6CE1B28B94EEE00986E4A /* RestAPI */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C5B6CE1528B8FD5700986E4A /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				C5B6CE1628B8FD5700986E4A /* KeychainWrapper.swift */,
+				C5B6CE1728B8FD5700986E4A /* SwiftKeychainWrapper.h */,
+				C5B6CE1828B8FD5700986E4A /* KeychainItemAccessibility.swift */,
+			);
+			path = KeychainWrapper;
+			sourceTree = "<group>";
+		};
+		C5B6CE1B28B94EEE00986E4A /* RestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C5B6CE1328B8DB5E00986E4A /* Request.swift */,
+				C5B6CE1D28B94F2800986E4A /* RequestManager.swift */,
+				C5B6CE2128B9501800986E4A /* UserRequestController.swift */,
+			);
+			path = RestAPI;
+			sourceTree = "<group>";
+		};
+		C5B6CE1C28B94F0E00986E4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5B6CE1F28B94F7300986E4A /* Response.swift */,
+				C5B6CE2C28B9524300986E4A /* User.swift */,
+				C5B6CE2328B9508E00986E4A /* ImageData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C5B6CE2528B950DC00986E4A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C5B6CE0C28B8C7E300986E4A /* MainViewController.swift */,
+				C5B6CE0D28B8C7E300986E4A /* MainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C5B6CE2628B950FB00986E4A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5B6CE2728B9511600986E4A /* UserController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C5B6CE2928B951A800986E4A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C5B6CE2A28B951CA00986E4A /* Utilitie.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +308,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5B6CDF928B8C24300986E4A /* AppDelegate.swift in Sources */,
+				C5B6CE2B28B951CA00986E4A /* Utilitie.swift in Sources */,
+				C5B6CE1928B8FD5700986E4A /* KeychainWrapper.swift in Sources */,
+				C5B6CE2828B9511600986E4A /* UserController.swift in Sources */,
+				C5B6CE2228B9501800986E4A /* UserRequestController.swift in Sources */,
+				C5B6CE1428B8DB5E00986E4A /* Request.swift in Sources */,
+				C5B6CE1E28B94F2800986E4A /* RequestManager.swift in Sources */,
+				C5B6CE1A28B8FD5700986E4A /* KeychainItemAccessibility.swift in Sources */,
+				C5B6CE2D28B9524300986E4A /* User.swift in Sources */,
 				C5B6CE0E28B8C7E300986E4A /* MainViewController.swift in Sources */,
+				C5B6CE2428B9508E00986E4A /* ImageData.swift in Sources */,
+				C5B6CE2028B94F7300986E4A /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
