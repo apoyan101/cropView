@@ -9,7 +9,7 @@ import Foundation
 
 struct ImageData: Decodable {
     private(set) var imageID: String
-    private(set) var objects: [CropItem]
+    private(set) var objects: [CropItem]?
 }
 
 struct CropItem: Decodable {

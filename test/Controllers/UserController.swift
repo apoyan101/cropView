@@ -15,7 +15,8 @@ final class UserController {
     }
 
     static var isLoggedIn: Bool {
-        KeychainWrapper.standard.string(forKey: SettingsKey.userToken) != nil ? true : false
+        print("Token: \(String(describing: KeychainWrapper.standard.string(forKey: SettingsKey.userToken)))")
+        return KeychainWrapper.standard.string(forKey: SettingsKey.userToken) != nil ? true : false
     }
 
     static func login(completion: @escaping (Bool) -> Void) {

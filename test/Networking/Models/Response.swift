@@ -9,16 +9,10 @@ import Foundation
 
 struct Response<T>: Decodable where T: Decodable  {
     private(set) var data: T?
-    private(set) var msg: String
-    private(set) var status: Int
+    private(set) var msg: String = String()
+    private(set) var status: Int = -1
 
     var isSuccess: Bool {
         status == 200
-    }
-
-    init() {
-        data = nil
-        msg = ""
-        status = -1
     }
 }

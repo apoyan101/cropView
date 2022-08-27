@@ -10,7 +10,7 @@ import Foundation
 final class UploadDataRequestController: RequestController {
     func uploadData(data: Data, dataName: String, completion: @escaping (ImageData?, Bool) -> Void) {
         request(path: "/localization").uploadData(data: data, dataName: dataName) { response in
-            completion(response.data, response.isSuccess)
+            completion(response?.data, response?.isSuccess ?? false)
         }
     }
 }

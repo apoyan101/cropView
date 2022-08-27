@@ -23,7 +23,7 @@ final class CropViewController: UIViewController {
                 print("User logged in: \(success)")
             }
         }
-        if let imageData = UIImage(named: "")?.jpegData(compressionQuality: 0.7) {
+        if let imageData = UIImage(named: "1")?.jpegData(compressionQuality: 1) {
             cropImageController.uploadData(data: imageData) { imageData, isSuccess in
 
             }

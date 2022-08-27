@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		339050E795E07D7F289D3D4C /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3ECA4300484409217F8DE9 /* Pods_test.framework */; };
 		C5B6CDF928B8C24300986E4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CDF828B8C24300986E4A /* AppDelegate.swift */; };
-		C5B6CE0228B8C24400986E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B6CE0128B8C24400986E4A /* Assets.xcassets */; };
 		C5B6CE0528B8C24400986E4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B6CE0328B8C24400986E4A /* LaunchScreen.storyboard */; };
 		C5B6CE0E28B8C7E300986E4A /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE0C28B8C7E300986E4A /* CropViewController.swift */; };
 		C5B6CE0F28B8C7E300986E4A /* CropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5B6CE0D28B8C7E300986E4A /* CropViewController.xib */; };
@@ -26,6 +25,7 @@
 		C5B6CE2F28B9561A00986E4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B6CE2E28B9561A00986E4A /* Main.storyboard */; };
 		C5B6CE3128B96E4F00986E4A /* CropImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE3028B96E4F00986E4A /* CropImageController.swift */; };
 		C5B6CE3328B9739500986E4A /* UploadDataRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE3228B9739500986E4A /* UploadDataRequestController.swift */; };
+		C5B6CE3528B9A0CC00986E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B6CE3428B9A0CC00986E4A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		BD02F9746FCF0A50EFF93F87 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 		C5B6CDF528B8C24300986E4A /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B6CDF828B8C24300986E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C5B6CE0128B8C24400986E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5B6CE0428B8C24400986E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5B6CE0628B8C24400986E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5B6CE0C28B8C7E300986E4A /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		C5B6CE2E28B9561A00986E4A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C5B6CE3028B96E4F00986E4A /* CropImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImageController.swift; sourceTree = "<group>"; };
 		C5B6CE3228B9739500986E4A /* UploadDataRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataRequestController.swift; sourceTree = "<group>"; };
+		C5B6CE3428B9A0CC00986E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 		C5B6CE1128B8C80300986E4A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C5B6CE0128B8C24400986E4A /* Assets.xcassets */,
+				C5B6CE3428B9A0CC00986E4A /* Assets.xcassets */,
 				C5B6CE0328B8C24400986E4A /* LaunchScreen.storyboard */,
 				C5B6CE0628B8C24400986E4A /* Info.plist */,
 			);
@@ -263,7 +263,7 @@
 			files = (
 				C5B6CE0528B8C24400986E4A /* LaunchScreen.storyboard in Resources */,
 				C5B6CE0F28B8C7E300986E4A /* CropViewController.xib in Resources */,
-				C5B6CE0228B8C24400986E4A /* Assets.xcassets in Resources */,
+				C5B6CE3528B9A0CC00986E4A /* Assets.xcassets in Resources */,
 				C5B6CE2F28B9561A00986E4A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
