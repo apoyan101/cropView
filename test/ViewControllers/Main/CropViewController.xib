@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CropViewController" customModule="test" customModuleProvider="target">
             <connections>
+                <outlet property="cropContainerView" destination="CUJ-Tt-Xyr" id="CAc-cY-swP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +18,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUJ-Tt-Xyr">
+                    <rect key="frame" x="16" y="96" width="382" height="448"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="2To-5v-bKb"/>
+                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="O3K-ug-okW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CUJ-Tt-Xyr" secondAttribute="trailing" constant="16" id="cmW-FZ-J8u"/>
+                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="96" id="tRa-o2-2on"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="106"/>
         </view>
     </objects>

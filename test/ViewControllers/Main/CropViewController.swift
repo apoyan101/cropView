@@ -8,11 +8,19 @@
 import UIKit
 import AVFoundation
 import MobileCoreServices
-import Photos
+import CropPickerView
 
 final class CropViewController: UIViewController {
 
+    @IBOutlet private weak var cropContainerView: UIView!
+
     private var cropImageController: CropImageController!
+    private let cropPickerView: CropPickerView = {
+        let cropPickerView = CropPickerView()
+        cropPickerView.translatesAutoresizingMaskIntoConstraints = false
+        cropPickerView.backgroundColor = .black
+        return cropPickerView
+    }()
 
     required convenience init(cropImageController: CropImageController) {
         self.init()
@@ -23,6 +31,8 @@ final class CropViewController: UIViewController {
         super.viewDidLoad()
         title = "Search"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPhoto))
+
+        cropContainerView.addSubviewWithLayoutToBounds(subview: cropPickerView)
 
         if !UserController.isLoggedIn {
             UserController.login { success in
@@ -86,13 +96,24 @@ final class CropViewController: UIViewController {
 }
 
 // MARK: - InputPickerViewDelegate
+
 extension CropViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage, let data = image.jpegData(compressionQuality: 1) {
-            cropImageController.uploadData(data: data) { imageData, success in
+            cropImageController.uploadData(data: data) { [self] imageData, success in
+                if let imageData = imageData {
+                    let minx = imageData.objects.first!.vertices.topLeft.x * cropContainerView.bounds.size.width
+                    let miny = imageData.objects.first!.vertices.topLeft.y * cropContainerView.bounds.size.height
+                    let maxx = imageData.objects.first!.vertices.topRight.x * cropContainerView.bounds.size.width
+                    let maxy = imageData.objects.first!.vertices.bottomRight.y * cropContainerView.bounds.size.height
 
+                    let width = maxx - minx
+                    let height = maxy - miny
+                    cropPickerView.image(image, crop: CGRect(x: minx, y: miny, width: width, height: height), isRealCropRect: true)
+                }
             }
         }
+        dismiss(animated: true)
     }
 }
 
@@ -105,5 +126,6 @@ extension CropViewController: UINavigationControllerDelegate, UIDocumentPickerDe
 
             }
         }
+        dismiss(animated: true)
     }
 }

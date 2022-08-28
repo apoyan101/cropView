@@ -15,7 +15,7 @@ final class UserController {
     }
 
     static var isLoggedIn: Bool {
-        print("Token: \(String(describing: KeychainWrapper.standard.string(forKey: SettingsKey.userToken)))")
+        print("Token: \(KeychainWrapper.standard.string(forKey: SettingsKey.userToken) ?? "")")
         return KeychainWrapper.standard.string(forKey: SettingsKey.userToken) != nil ? true : false
     }
 
