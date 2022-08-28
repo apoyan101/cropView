@@ -111,7 +111,7 @@
 				C5B6CE1028B8C7F200986E4A /* ViewControllers */,
 				C5B6CE2928B951A800986E4A /* Utilities */,
 				C5B6CE1528B8FD5700986E4A /* KeychainWrapper */,
-				C5B6CE1128B8C80300986E4A /* Supporting Files */,
+				C5B6CE1128B8C80300986E4A /* SupportingFiles */,
 				C5B6CE2E28B9561A00986E4A /* Main.storyboard */,
 			);
 			path = test;
@@ -125,14 +125,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		C5B6CE1128B8C80300986E4A /* Supporting Files */ = {
+		C5B6CE1128B8C80300986E4A /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				C5B6CE3428B9A0CC00986E4A /* Assets.xcassets */,
 				C5B6CE0328B8C24400986E4A /* LaunchScreen.storyboard */,
 				C5B6CE0628B8C24400986E4A /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		C5B6CE1228B8DB4D00986E4A /* Networking */ = {
@@ -470,9 +470,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V7Y74R295W;
+				DEVELOPMENT_TEAM = 34F9DZ3A95;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "test/Supporting Files/Info.plist";
+				INFOPLIST_FILE = test/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -500,9 +500,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V7Y74R295W;
+				DEVELOPMENT_TEAM = 34F9DZ3A95;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "test/Supporting Files/Info.plist";
+				INFOPLIST_FILE = test/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
