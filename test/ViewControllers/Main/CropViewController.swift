@@ -12,6 +12,11 @@ import CropPickerView
 
 final class CropViewController: BaseViewController {
 
+    enum ImageType {
+        case largerWidth
+        case largerHeight
+    }
+
     @IBOutlet private weak var cropContainerView: UIView!
     @IBOutlet private weak var collectionView: UICollectionView!
     // Y Constraint
@@ -105,6 +110,29 @@ final class CropViewController: BaseViewController {
         })
         present(alertController, animated: true)
     }
+
+    private func setupConstraint(imageType: ImageType) {
+        switch imageType {
+        case .largerWidth:
+            // Y
+            cropContainerViewCenterYConstraint.isActive = false
+            cropContainerViewHeightConstraint.isActive = true
+            // X
+            cropContainerViewCenterXConstraint.isActive = false
+            cropContainerViewWidthConstraint.isActive = false
+            cropContainerViewleadingConstraint.isActive = true
+            cropContainerViewtrailingConstraint.isActive = true
+        case .largerHeight:
+            // Y
+            cropContainerViewHeightConstraint.isActive = false
+            cropContainerViewCenterYConstraint.isActive = true
+            // X
+            cropContainerViewleadingConstraint.isActive = false
+            cropContainerViewtrailingConstraint.isActive = false
+            cropContainerViewCenterXConstraint.isActive = true
+            cropContainerViewWidthConstraint.isActive = true
+        }
+    }
 }
 
 // MARK: - InputPickerViewDelegate -
@@ -112,31 +140,15 @@ final class CropViewController: BaseViewController {
 extension CropViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage, let data = image.jpegData(compressionQuality: 0.5) {
+            let imageType: ImageType = image.size.width > image.size.height ? .largerWidth : .largerHeight
             showDataLoadingView()
             selectedIndex = 0
-
-            if image.size.width > image.size.height {
-                cropContainerViewCenterYConstraint.isActive = false
-                cropContainerViewHeightConstraint.isActive = true
-
-                cropContainerViewCenterXConstraint.isActive = false
-                cropContainerViewWidthConstraint.isActive = false
-                cropContainerViewleadingConstraint.isActive = true
-                cropContainerViewtrailingConstraint.isActive = true
-
-
-                cropPickerView.image(image)
+            setupConstraint(imageType: imageType)
+            cropPickerView.image(image)
+            switch imageType {
+            case .largerWidth:
                 cropContainerViewHeightConstraint.constant = cropPickerView.imageView.frameForImageInImageViewAspectFit.height
-            } else {
-                cropContainerViewHeightConstraint.isActive = false
-                cropContainerViewCenterYConstraint.isActive = true
-
-                cropContainerViewleadingConstraint.isActive = false
-                cropContainerViewtrailingConstraint.isActive = false
-                cropContainerViewCenterXConstraint.isActive = true
-                cropContainerViewWidthConstraint.isActive = true
-
-                cropPickerView.image(image)
+            case .largerHeight:
                 cropContainerViewWidthConstraint.constant = cropPickerView.imageView.frameForImageInImageViewAspectFit.width
             }
             cropImageController.image = image
