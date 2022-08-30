@@ -12,8 +12,12 @@
             <connections>
                 <outlet property="collectionView" destination="sfF-I7-E8I" id="ayA-FC-Tcb"/>
                 <outlet property="cropContainerView" destination="CUJ-Tt-Xyr" id="CAc-cY-swP"/>
-                <outlet property="cropContainerViewHeight" destination="nLY-YB-FPx" id="xOJ-mq-fwa"/>
-                <outlet property="cropContainerViewHeightToActive" destination="wAz-72-bus" id="o5I-Fr-73A"/>
+                <outlet property="cropContainerViewCenterXConstraint" destination="G0d-Tz-zcC" id="dGL-ep-vTg"/>
+                <outlet property="cropContainerViewCenterYConstraint" destination="wAz-72-bus" id="MPS-yM-qbx"/>
+                <outlet property="cropContainerViewHeightConstraint" destination="nLY-YB-FPx" id="bZs-zB-3q8"/>
+                <outlet property="cropContainerViewWidthConstraint" destination="tsv-9O-7Tk" id="2tR-9i-WRh"/>
+                <outlet property="cropContainerViewleadingConstraint" destination="Kvp-gU-iIs" id="5eg-WO-cXy"/>
+                <outlet property="cropContainerViewtrailingConstraint" destination="IdQ-Me-1FV" id="Xs4-rw-Rtg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +30,13 @@
                     <rect key="frame" x="16" y="248" width="382" height="400"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="400" id="nLY-YB-FPx"/>
+                        <constraint firstAttribute="width" constant="382" id="tsv-9O-7Tk"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="tsv-9O-7Tk"/>
+                        </mask>
+                    </variation>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sfF-I7-E8I">
                     <rect key="frame" x="16" y="702" width="382" height="100"/>

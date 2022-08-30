@@ -14,10 +14,14 @@ final class CropViewController: BaseViewController {
 
     @IBOutlet private weak var cropContainerView: UIView!
     @IBOutlet private weak var collectionView: UICollectionView!
-
-    @IBOutlet private var cropContainerViewHeight: NSLayoutConstraint!
-    @IBOutlet private var cropContainerViewWidth: NSLayoutConstraint!
-    @IBOutlet private var cropContainerViewHeightToActive: NSLayoutConstraint!
+    // Y Constraint
+    @IBOutlet private var cropContainerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private var cropContainerViewCenterYConstraint: NSLayoutConstraint!
+    // X Constraint
+    @IBOutlet private var cropContainerViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet private var cropContainerViewleadingConstraint: NSLayoutConstraint!
+    @IBOutlet private var cropContainerViewtrailingConstraint: NSLayoutConstraint!
+    @IBOutlet private var cropContainerViewCenterXConstraint: NSLayoutConstraint!
 
     private let cropPickerView = CropPickerView()
     private var cropImageController: CropImageController!
@@ -103,7 +107,7 @@ final class CropViewController: BaseViewController {
     }
 }
 
-// MARK: - InputPickerViewDelegate
+// MARK: - InputPickerViewDelegate -
 
 extension CropViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -111,16 +115,29 @@ extension CropViewController: UIImagePickerControllerDelegate {
             showDataLoadingView()
             selectedIndex = 0
 
-            if image.size.height < image.size.width {
-                cropContainerViewHeightToActive.isActive = false
-                cropContainerViewHeight.isActive = true
+            if image.size.width > image.size.height {
+                cropContainerViewCenterYConstraint.isActive = false
+                cropContainerViewHeightConstraint.isActive = true
+
+                cropContainerViewCenterXConstraint.isActive = false
+                cropContainerViewWidthConstraint.isActive = false
+                cropContainerViewleadingConstraint.isActive = true
+                cropContainerViewtrailingConstraint.isActive = true
+
+
                 cropPickerView.image(image)
-         //       cropContainerViewWidth.constant = cropPickerView.imageView.frameForImageInImageViewAspectFit.width
-                cropContainerViewHeight.constant = cropPickerView.imageView.frameForImageInImageViewAspectFit.height
+                cropContainerViewHeightConstraint.constant = cropPickerView.imageView.frameForImageInImageViewAspectFit.height
             } else {
-                cropContainerViewHeight.isActive = false
-                cropContainerViewHeightToActive.isActive = true
+                cropContainerViewHeightConstraint.isActive = false
+                cropContainerViewCenterYConstraint.isActive = true
+
+                cropContainerViewleadingConstraint.isActive = false
+                cropContainerViewtrailingConstraint.isActive = false
+                cropContainerViewCenterXConstraint.isActive = true
+                cropContainerViewWidthConstraint.isActive = true
+
                 cropPickerView.image(image)
+                cropContainerViewWidthConstraint.constant = cropPickerView.imageView.frameForImageInImageViewAspectFit.width
             }
             cropImageController.image = image
             cropImageController.imageSize = cropPickerView.imageView.frameForImageInImageViewAspectFit
@@ -170,7 +187,7 @@ extension CropViewController: UICollectionViewDelegate, UICollectionViewDelegate
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-       // let width = (view.bounds.width - 20) / 3
+       // let width = (view.bounds.width - 20) / 3 // TODO: Make responsive
         return CGSize(width: 80, height: 80)
     }
 }
