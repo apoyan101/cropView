@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct SettingsKey {
+    static let userToken = "userToken"
+    static let userDataStore = "userDataStore"
+}
+
 final class UserController {
     static private(set) var user: User?
 

@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CropViewController" customModule="test" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="sfF-I7-E8I" id="ayA-FC-Tcb"/>
                 <outlet property="cropContainerView" destination="CUJ-Tt-Xyr" id="CAc-cY-swP"/>
+                <outlet property="cropContainerViewHeight" destination="nLY-YB-FPx" id="xOJ-mq-fwa"/>
+                <outlet property="cropContainerViewHeightToActive" destination="wAz-72-bus" id="o5I-Fr-73A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,18 +23,46 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUJ-Tt-Xyr">
-                    <rect key="frame" x="16" y="96" width="382" height="448"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="16" y="248" width="382" height="400"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="nLY-YB-FPx"/>
+                    </constraints>
                 </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sfF-I7-E8I">
+                    <rect key="frame" x="16" y="702" width="382" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="y7R-jI-VYU"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vVh-oi-NfQ">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="2To-5v-bKb"/>
-                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="O3K-ug-okW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CUJ-Tt-Xyr" secondAttribute="trailing" constant="16" id="cmW-FZ-J8u"/>
-                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="96" id="tRa-o2-2on"/>
+                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="7Vr-Fg-TYS"/>
+                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="G0d-Tz-zcC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CUJ-Tt-Xyr" secondAttribute="trailing" constant="16" id="IdQ-Me-1FV"/>
+                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Kvp-gU-iIs"/>
+                <constraint firstItem="sfF-I7-E8I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="24" id="Lhw-K6-DOl"/>
+                <constraint firstItem="sfF-I7-E8I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="24" id="YKJ-co-caa"/>
+                <constraint firstItem="sfF-I7-E8I" firstAttribute="trailing" secondItem="CUJ-Tt-Xyr" secondAttribute="trailing" id="Zuj-hh-QuO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sfF-I7-E8I" secondAttribute="bottom" constant="60" id="bgQ-Zo-uQr"/>
+                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" priority="750" id="gOa-na-IlX"/>
+                <constraint firstItem="sfF-I7-E8I" firstAttribute="leading" secondItem="CUJ-Tt-Xyr" secondAttribute="leading" id="oRd-4E-1Ec"/>
+                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.55" id="wAz-72-bus"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="wAz-72-bus"/>
+                    <exclude reference="Lhw-K6-DOl"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="139" y="106"/>
         </view>
     </objects>

@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UINavigationBar.appearance().barStyle = .black
-        UINavigationBar.appearance().tintColor = .black
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.black]
+        UINavigationBar.appearance().tintColor = .purple
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.purple]
         window = UIWindow(frame: UIScreen.main.bounds)
         apiManager = ApiManager()
         let cropImageController = CropImageController()

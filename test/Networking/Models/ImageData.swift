@@ -5,7 +5,7 @@
 //  Created by Ara Apoyan on 26.08.22.
 //
 
-import Foundation
+import UIKit
 
 struct ImageData: Decodable {
     private(set) var imageID: String
@@ -28,4 +28,11 @@ struct Vertices: Decodable {
 struct Coordinate: Decodable {
     private(set) var x: Double
     private(set) var y: Double
+}
+
+struct CropResult {
+    private(set) var image: UIImage
+    private(set) var cropFrame: CGRect
+    private(set) var realCropFrame: CGRect
+    private(set) var imageSize: CGSize
 }

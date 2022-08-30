@@ -26,6 +26,71 @@ extension UIView {
             subView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -insets.bottom).isActive = true
         }
     }
+} 
+
+extension UIImageView {
+    var frameForImageInImageViewAspectFit: CGSize {
+        if let img = image {
+            let imageRatio = img.size.width / img.size.height
+            let viewRatio = frame.size.width / frame.size.height
+            if imageRatio < viewRatio {
+                let scale = frame.size.height / img.size.height
+                let width = scale * img.size.width
+                return CGSize(width: width, height: frame.size.height)
+            } else {
+                let scale = frame.size.width / img.size.width
+                let height = scale * img.size.height
+                return CGSize(width: frame.size.width, height: height)
+            }
+        }
+        return CGSize(width: 0, height: 0)
+    }
+}
+
+extension UICollectionView {
+    func registerNibForCell(names: [String]) {
+        for name in names {
+            register(UINib(nibName: name, bundle: nil), forCellWithReuseIdentifier: name)
+        }
+    }
+}
+
+extension UIResponder {
+    static var id: String {
+        return String(describing: self)
+    }
+}
+
+extension UIImage {
+    func crop(_ rect: CGRect, scale: CGFloat = 1) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: rect.size.width / scale, height: rect.size.height / scale), true, 0.0)
+        draw(at: CGPoint(x: -rect.origin.x / scale, y: -rect.origin.y / scale))
+        let croppedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return croppedImage
+    }
+}
+
+extension UIWindow {
+    static func bottomSafeAreaHeight() -> CGFloat {
+        var bottomSafeAreaHeight: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            if let window = UIApplication.shared.connectedScenes.flatMap({($0 as? UIWindowScene)?.windows ?? []}).first(where: {$0.isKeyWindow}) {
+                bottomSafeAreaHeight = window.safeAreaInsets.bottom
+            }
+        }
+        return bottomSafeAreaHeight
+    }
+
+    static func topSafeAreaHeight() -> CGFloat {
+        var topSafeAreaHeight: CGFloat = 20
+        if #available(iOS 11.0, *) {
+            if let window = UIApplication.shared.connectedScenes.flatMap({($0 as? UIWindowScene)?.windows ?? []}).first(where: {$0.isKeyWindow}) {
+                topSafeAreaHeight = window.safeAreaInsets.top
+            }
+        }
+        return topSafeAreaHeight
+    }
 }
 
 extension Notification.Name {
@@ -53,9 +118,4 @@ extension Data {
         default: return "application/octet-stream"
         }
     }
-}
-
-struct SettingsKey {
-    static let userToken = "userToken"
-    static let userDataStore = "userDataStore"
 }
