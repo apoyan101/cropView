@@ -12,6 +12,7 @@
 		C512481D28BCDC1400C6840A /* CroppImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C512481B28BCDC1400C6840A /* CroppImageCollectionViewCell.xib */; };
 		C512481F28BD6AD300C6840A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C512481E28BD6AD300C6840A /* Loader.swift */; };
 		C512482128BD6CE900C6840A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C512482028BD6CE900C6840A /* BaseViewController.swift */; };
+		C512482328BF521500C6840A /* PickImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C512482228BF521500C6840A /* PickImageViewController.swift */; };
 		C5B6CDF928B8C24300986E4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CDF828B8C24300986E4A /* AppDelegate.swift */; };
 		C5B6CE0528B8C24400986E4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B6CE0328B8C24400986E4A /* LaunchScreen.storyboard */; };
 		C5B6CE0E28B8C7E300986E4A /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE0C28B8C7E300986E4A /* CropViewController.swift */; };
@@ -39,6 +40,7 @@
 		C512481B28BCDC1400C6840A /* CroppImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CroppImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		C512481E28BD6AD300C6840A /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		C512482028BD6CE900C6840A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C512482228BF521500C6840A /* PickImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewController.swift; sourceTree = "<group>"; };
 		C5B6CDF528B8C24300986E4A /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B6CDF828B8C24300986E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5B6CE0428B8C24400986E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C512482028BD6CE900C6840A /* BaseViewController.swift */,
+				C512482228BF521500C6840A /* PickImageViewController.swift */,
 				C5B6CE0C28B8C7E300986E4A /* CropViewController.swift */,
 				C5B6CE0D28B8C7E300986E4A /* CropViewController.xib */,
 			);
@@ -343,6 +346,7 @@
 				C5B6CE2228B9501800986E4A /* UserRequestController.swift in Sources */,
 				C512482128BD6CE900C6840A /* BaseViewController.swift in Sources */,
 				C5B6CE1428B8DB5E00986E4A /* Request.swift in Sources */,
+				C512482328BF521500C6840A /* PickImageViewController.swift in Sources */,
 				C5B6CE1E28B94F2800986E4A /* RequestManager.swift in Sources */,
 				C5B6CE1A28B8FD5700986E4A /* KeychainItemAccessibility.swift in Sources */,
 				C5B6CE2D28B9524300986E4A /* User.swift in Sources */,

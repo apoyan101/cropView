@@ -13,13 +13,30 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Search"
+        navigationItem.backButtonTitle = ""
         if !UserController.isLoggedIn {
             UserController.login { success in
                 print("User logged in: \(success)")
             }
         }
     }
-    func showDataLoadingView() {}
-    func hideDataLoadingView() {}
+
+    func showDataLoadingView() {
+        if loaderView == nil {
+            view.isUserInteractionEnabled = false
+            loaderView = Loader.showOn(view)
+        }
+    }
+
+    func hideDataLoadingView() {
+        view.isUserInteractionEnabled = true
+        loaderView?.remove()
+        loaderView = nil
+    }
+
+    func showAlert(title: String? = nil, message: String, completion: ((UIAlertAction) -> Void)?) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: completion))
+        present(alertVC, animated: true)
+    }
 }

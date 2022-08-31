@@ -54,15 +54,15 @@
             <constraints>
                 <constraint firstItem="sfF-I7-E8I" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.12" id="0Ai-2c-DKj"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="7Vr-Fg-TYS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sfF-I7-E8I" secondAttribute="trailing" constant="16" id="BQU-FR-VQr"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="G0d-Tz-zcC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CUJ-Tt-Xyr" secondAttribute="trailing" constant="16" id="IdQ-Me-1FV"/>
+                <constraint firstItem="sfF-I7-E8I" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JRO-a9-A7B"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Kvp-gU-iIs"/>
                 <constraint firstItem="sfF-I7-E8I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="24" id="Lhw-K6-DOl"/>
                 <constraint firstItem="sfF-I7-E8I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="24" id="YKJ-co-caa"/>
-                <constraint firstItem="sfF-I7-E8I" firstAttribute="trailing" secondItem="CUJ-Tt-Xyr" secondAttribute="trailing" id="Zuj-hh-QuO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sfF-I7-E8I" secondAttribute="bottom" constant="12" id="bgQ-Zo-uQr"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" priority="750" id="gOa-na-IlX"/>
-                <constraint firstItem="sfF-I7-E8I" firstAttribute="leading" secondItem="CUJ-Tt-Xyr" secondAttribute="leading" id="oRd-4E-1Ec"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.55" id="wAz-72-bus"/>
             </constraints>
             <variation key="default">

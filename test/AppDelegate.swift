@@ -19,9 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.purple]
         window = UIWindow(frame: UIScreen.main.bounds)
         apiManager = ApiManager()
-        let cropImageController = CropImageController()
-        let cropViewController = CropViewController(cropImageController: cropImageController)
-        let navigationController = UINavigationController(rootViewController: cropViewController)
+        let pickImageViewController = PickImageViewController()
+        let navigationController = UINavigationController(rootViewController: pickImageViewController)
         window!.rootViewController = navigationController
         window!.makeKeyAndVisible()
         return true

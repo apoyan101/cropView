@@ -19,7 +19,11 @@ final class CropImageController {
     var image: UIImage!
     var imageSize: CGSize!
 
-    func uploadData(data: Data) {
+    init(cropControllerDelegate: CropImageControllerDelegate) {
+        delegate = cropControllerDelegate
+    }
+
+    public func uploadData(data: Data) {
         let dataName = UUID().uuidString
         UIApplication.appDelegate.apiManager.uploadDataRequestController.uploadData(data: data, dataName: dataName) { [weak self] imageData, isSuccess in
             if let imageData = imageData, isSuccess {
@@ -30,7 +34,7 @@ final class CropImageController {
         }
     }
 
-    func cropImages(cropItems: [CropItem]) {
+    private func cropImages(cropItems: [CropItem]) {
         croppedImages.removeAll()
         for item in cropItems {
             if let image = image, let imageSize = imageSize {
