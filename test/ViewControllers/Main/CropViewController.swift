@@ -17,6 +17,8 @@ final class CropViewController: BaseViewController {
 
     @IBOutlet private weak var cropContainerView: UIView!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var searchButton: UIButton!
+
     // Y Constraint
     @IBOutlet private var cropContainerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var cropContainerViewCenterYConstraint: NSLayoutConstraint!
@@ -35,6 +37,7 @@ final class CropViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Visual Search"
+        searchButton.layer.cornerRadius = 4
         showDataLoadingView()
         cropContainerView.addSubviewWithLayoutToBounds(subview: cropPickerView)
         cropImageController = CropImageController(cropControllerDelegate: self)
@@ -56,6 +59,10 @@ final class CropViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerNibForCell(names: [CroppImageCollectionViewCell.id])
+    }
+
+    @IBAction private func searchBtnaction() {
+        print("Cropped item tapped: \(cropImageController.croppedImages[selectedIndex].realCropFrame)")
     }
 
     private func setupConstraint(imageType: ImageType) {

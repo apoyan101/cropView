@@ -18,6 +18,7 @@
                 <outlet property="cropContainerViewWidthConstraint" destination="tsv-9O-7Tk" id="2tR-9i-WRh"/>
                 <outlet property="cropContainerViewleadingConstraint" destination="Kvp-gU-iIs" id="5eg-WO-cXy"/>
                 <outlet property="cropContainerViewtrailingConstraint" destination="IdQ-Me-1FV" id="Xs4-rw-Rtg"/>
+                <outlet property="searchButton" destination="1Pv-f2-6bd" id="mJI-lK-9Mb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,7 +35,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUJ-Tt-Xyr">
-                    <rect key="frame" x="16" y="248" width="382" height="400"/>
+                    <rect key="frame" x="16" y="223.33333333333337" width="382" height="400"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="400" id="nLY-YB-FPx"/>
                         <constraint firstAttribute="width" constant="382" id="tsv-9O-7Tk"/>
@@ -46,14 +47,14 @@
                     </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcs-JF-eVp" userLabel="separatorView">
-                    <rect key="frame" x="0.0" y="749.33333333333337" width="414" height="0.66666666666662877"/>
+                    <rect key="frame" x="0.0" y="631.33333333333337" width="414" height="0.66666666666662877"/>
                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="0.5" id="hZ7-dX-G2V"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sfF-I7-E8I">
-                    <rect key="frame" x="16" y="750" width="382" height="107.66666666666663"/>
+                    <rect key="frame" x="16" y="632" width="382" height="107.66666666666663"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vVh-oi-NfQ">
                         <size key="itemSize" width="128" height="128"/>
@@ -63,19 +64,33 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsU-Eu-sc8" userLabel="separatorView">
-                    <rect key="frame" x="0.0" y="857.66666666666663" width="414" height="0.33333333333337123"/>
+                    <rect key="frame" x="0.0" y="739.66666666666663" width="414" height="0.33333333333337123"/>
                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="0.5" id="v8o-iD-D7R"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pv-f2-6bd">
+                    <rect key="frame" x="16" y="780" width="382" height="50"/>
+                    <color key="backgroundColor" red="0.47058823529411764" green="0.027450980392156862" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="PGG-bz-Uja"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
+                    <state key="normal" title="Search" image="magnifyingglass" catalog="system">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="searchBtnaction" destination="-1" eventType="touchUpInside" id="3Z1-O0-hQW"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="sfF-I7-E8I" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.12" id="0Ai-2c-DKj"/>
                 <constraint firstItem="XsU-Eu-sc8" firstAttribute="top" secondItem="sfF-I7-E8I" secondAttribute="bottom" id="2GZ-NV-Rvo"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XsU-Eu-sc8" secondAttribute="bottom" constant="4" id="4U8-kg-sfK"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IVk-wM-EgE" secondAttribute="top" constant="12" id="7Vr-Fg-TYS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sfF-I7-E8I" secondAttribute="trailing" constant="16" id="BQU-FR-VQr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IVk-wM-EgE" secondAttribute="trailing" id="Cgg-RY-geh"/>
@@ -86,14 +101,18 @@
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Kvp-gU-iIs"/>
                 <constraint firstItem="sfF-I7-E8I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="24" id="Lhw-K6-DOl"/>
                 <constraint firstAttribute="trailing" secondItem="XsU-Eu-sc8" secondAttribute="trailing" id="O4q-0e-8cb"/>
-                <constraint firstItem="wcs-JF-eVp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="12" id="TOA-dz-ldg"/>
+                <constraint firstItem="wcs-JF-eVp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="8" id="TOA-dz-ldg"/>
                 <constraint firstItem="sfF-I7-E8I" firstAttribute="top" secondItem="wcs-JF-eVp" secondAttribute="bottom" id="VC6-G2-IgP"/>
                 <constraint firstItem="XsU-Eu-sc8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WPS-44-P40"/>
                 <constraint firstItem="IVk-wM-EgE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XOO-cC-9J4"/>
+                <constraint firstItem="1Pv-f2-6bd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Z9v-KU-AD8"/>
                 <constraint firstAttribute="trailing" secondItem="wcs-JF-eVp" secondAttribute="trailing" id="ab2-BI-CZX"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" priority="750" id="gOa-na-IlX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Pv-f2-6bd" secondAttribute="trailing" constant="16" id="i9u-iF-nWu"/>
                 <constraint firstItem="IVk-wM-EgE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iph-B1-9A1"/>
+                <constraint firstItem="1Pv-f2-6bd" firstAttribute="top" secondItem="XsU-Eu-sc8" secondAttribute="bottom" constant="40" id="krO-BT-It5"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.55" id="wAz-72-bus"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1Pv-f2-6bd" secondAttribute="bottom" constant="32" id="xSX-uJ-bNx"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
@@ -105,6 +124,7 @@
         </view>
     </objects>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

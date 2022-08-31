@@ -25,7 +25,7 @@
 		C5B6CE2228B9501800986E4A /* UserRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2128B9501800986E4A /* UserRequestController.swift */; };
 		C5B6CE2428B9508E00986E4A /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2328B9508E00986E4A /* ImageData.swift */; };
 		C5B6CE2828B9511600986E4A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2728B9511600986E4A /* UserController.swift */; };
-		C5B6CE2B28B951CA00986E4A /* Utilitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2A28B951CA00986E4A /* Utilitie.swift */; };
+		C5B6CE2B28B951CA00986E4A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2A28B951CA00986E4A /* Extensions.swift */; };
 		C5B6CE2D28B9524300986E4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE2C28B9524300986E4A /* User.swift */; };
 		C5B6CE3128B96E4F00986E4A /* CropImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE3028B96E4F00986E4A /* CropImageController.swift */; };
 		C5B6CE3328B9739500986E4A /* UploadDataRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6CE3228B9739500986E4A /* UploadDataRequestController.swift */; };
@@ -56,7 +56,7 @@
 		C5B6CE2128B9501800986E4A /* UserRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestController.swift; sourceTree = "<group>"; };
 		C5B6CE2328B9508E00986E4A /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		C5B6CE2728B9511600986E4A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
-		C5B6CE2A28B951CA00986E4A /* Utilitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilitie.swift; sourceTree = "<group>"; };
+		C5B6CE2A28B951CA00986E4A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C5B6CE2C28B9524300986E4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C5B6CE3028B96E4F00986E4A /* CropImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImageController.swift; sourceTree = "<group>"; };
 		C5B6CE3228B9739500986E4A /* UploadDataRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataRequestController.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		C5B6CE2928B951A800986E4A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				C5B6CE2A28B951CA00986E4A /* Utilitie.swift */,
+				C5B6CE2A28B951CA00986E4A /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5B6CDF928B8C24300986E4A /* AppDelegate.swift in Sources */,
-				C5B6CE2B28B951CA00986E4A /* Utilitie.swift in Sources */,
+				C5B6CE2B28B951CA00986E4A /* Extensions.swift in Sources */,
 				C512481C28BCDC1400C6840A /* CroppImageCollectionViewCell.swift in Sources */,
 				C5B6CE1928B8FD5700986E4A /* KeychainWrapper.swift in Sources */,
 				C5B6CE2828B9511600986E4A /* UserController.swift in Sources */,
