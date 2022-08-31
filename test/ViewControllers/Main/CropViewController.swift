@@ -199,8 +199,8 @@ extension CropViewController: UICollectionViewDelegate, UICollectionViewDelegate
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-       // let width = (view.bounds.width - 20) / 3 // TODO: Make responsive
-        return CGSize(width: 80, height: 80)
+        let width = collectionView.bounds.height - 20
+        return CGSize(width: width, height: width)
     }
 }
 
