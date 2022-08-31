@@ -23,13 +23,13 @@ final class CropImageController {
         delegate = cropControllerDelegate
     }
 
-    public func uploadData(data: Data) {
+    public func uploadData(data: Data, completion: @escaping (String) -> Void) {
         let dataName = UUID().uuidString
-        UIApplication.appDelegate.apiManager.uploadDataRequestController.uploadData(data: data, dataName: dataName) { [weak self] imageData, isSuccess in
+        UIApplication.appDelegate.apiManager.uploadDataRequestController.uploadData(data: data, dataName: dataName) { [weak self] imageData, message, isSuccess in
             if let imageData = imageData, isSuccess {
                 self?.cropImages(cropItems: imageData.objects)
             } else {
-                // TODO: Handle errors
+                completion(message)
             }
         }
     }

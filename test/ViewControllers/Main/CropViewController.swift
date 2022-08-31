@@ -42,7 +42,9 @@ final class CropViewController: BaseViewController {
         cropContainerView.addSubviewWithLayoutToBounds(subview: cropPickerView)
         cropImageController = CropImageController(cropControllerDelegate: self)
         cropImageController.image = UIImage(data: imageData)
-        cropImageController.uploadData(data: imageData)
+        cropImageController.uploadData(data: imageData) { [weak self] errorMessage in
+            self?.showAlert(message: errorMessage, completion: nil)
+        }
 
         let imageType: ImageType = cropImageController.image.size.width > cropImageController.image.size.height ? .largerWidth : .largerHeight
         setupConstraint(imageType: imageType)
