@@ -15,7 +15,7 @@ protocol CropImageControllerDelegate: AnyObject {
 final class CropImageController {
 
     private(set) var croppedImages = [CropResult]()
-    weak var delegate: CropImageControllerDelegate?
+    private weak var delegate: CropImageControllerDelegate?
     var image: UIImage!
     var imageSize: CGSize!
 

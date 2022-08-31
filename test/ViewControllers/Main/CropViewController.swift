@@ -30,6 +30,7 @@ final class CropViewController: BaseViewController {
     private let cropPickerView = CropPickerView()
     private var cropImageController: CropImageController!
     private var selectedIndex = 0
+    private var itemSpacing: CGFloat = 10
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,8 +111,12 @@ extension CropViewController: UICollectionViewDelegate, UICollectionViewDelegate
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.height - 20
+        let width = collectionView.bounds.height - itemSpacing
         return CGSize(width: width, height: width)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return itemSpacing
     }
 }
 

@@ -26,6 +26,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVk-wM-EgE" userLabel="separatorView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="0.6666666666666643"/>
+                    <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="OYw-cJ-IR1"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUJ-Tt-Xyr">
                     <rect key="frame" x="16" y="248" width="382" height="400"/>
                     <constraints>
@@ -38,31 +45,54 @@
                         </mask>
                     </variation>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sfF-I7-E8I">
-                    <rect key="frame" x="16" y="742.33333333333337" width="382" height="107.66666666666663"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcs-JF-eVp" userLabel="separatorView">
+                    <rect key="frame" x="0.0" y="749.33333333333337" width="414" height="0.66666666666662877"/>
+                    <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="hZ7-dX-G2V"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sfF-I7-E8I">
+                    <rect key="frame" x="16" y="750" width="382" height="107.66666666666663"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vVh-oi-NfQ">
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vVh-oi-NfQ">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsU-Eu-sc8" userLabel="separatorView">
+                    <rect key="frame" x="0.0" y="857.66666666666663" width="414" height="0.33333333333337123"/>
+                    <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="v8o-iD-D7R"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="sfF-I7-E8I" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.12" id="0Ai-2c-DKj"/>
-                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="7Vr-Fg-TYS"/>
+                <constraint firstItem="XsU-Eu-sc8" firstAttribute="top" secondItem="sfF-I7-E8I" secondAttribute="bottom" id="2GZ-NV-Rvo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XsU-Eu-sc8" secondAttribute="bottom" constant="4" id="4U8-kg-sfK"/>
+                <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IVk-wM-EgE" secondAttribute="top" constant="12" id="7Vr-Fg-TYS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sfF-I7-E8I" secondAttribute="trailing" constant="16" id="BQU-FR-VQr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IVk-wM-EgE" secondAttribute="trailing" id="Cgg-RY-geh"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="G0d-Tz-zcC"/>
+                <constraint firstItem="wcs-JF-eVp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H4A-as-BY1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CUJ-Tt-Xyr" secondAttribute="trailing" constant="16" id="IdQ-Me-1FV"/>
                 <constraint firstItem="sfF-I7-E8I" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JRO-a9-A7B"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Kvp-gU-iIs"/>
                 <constraint firstItem="sfF-I7-E8I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="24" id="Lhw-K6-DOl"/>
-                <constraint firstItem="sfF-I7-E8I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="24" id="YKJ-co-caa"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sfF-I7-E8I" secondAttribute="bottom" constant="12" id="bgQ-Zo-uQr"/>
+                <constraint firstAttribute="trailing" secondItem="XsU-Eu-sc8" secondAttribute="trailing" id="O4q-0e-8cb"/>
+                <constraint firstItem="wcs-JF-eVp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CUJ-Tt-Xyr" secondAttribute="bottom" constant="12" id="TOA-dz-ldg"/>
+                <constraint firstItem="sfF-I7-E8I" firstAttribute="top" secondItem="wcs-JF-eVp" secondAttribute="bottom" id="VC6-G2-IgP"/>
+                <constraint firstItem="XsU-Eu-sc8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WPS-44-P40"/>
+                <constraint firstItem="IVk-wM-EgE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XOO-cC-9J4"/>
+                <constraint firstAttribute="trailing" secondItem="wcs-JF-eVp" secondAttribute="trailing" id="ab2-BI-CZX"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" priority="750" id="gOa-na-IlX"/>
+                <constraint firstItem="IVk-wM-EgE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iph-B1-9A1"/>
                 <constraint firstItem="CUJ-Tt-Xyr" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.55" id="wAz-72-bus"/>
             </constraints>
             <variation key="default">
